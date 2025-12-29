@@ -1,0 +1,27 @@
+Ready to Suffer? —here’s the next realism bump for Lab 1C-Bonus-D:
+  1) Zone apex (chewbacca-growl.com) ALIAS → ALB
+  2) ALB access logs → S3 bucket (with the required bucket policy)
+  3) A couple of verification commands students can run to prove it’s working
+
+Add this as bonus_b_logging_route53_apex.tf (or append to your existing Route53/logging file).
+
+Add variables (append to variables.tf)
+variable "enable_alb_access_logs" {
+  description = "Enable ALB access logging to S3."
+  type        = bool
+  default     = true
+}
+
+variable "alb_access_logs_prefix" {
+  description = "S3 prefix for ALB access logs."
+  type        = string
+  default     = "alb-access-logs"
+}
+
+Add file: bonus_b_logging_route53_apex.tf
+
+
+
+
+
+
